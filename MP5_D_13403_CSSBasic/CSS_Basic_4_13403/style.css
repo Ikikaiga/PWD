@@ -1,0 +1,26 @@
+body{
+  background-color:aliceblue;
+  margin:20px;
+  width:950px;
+  margin:auto;
+}
+
+p{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight:bold;
+  background-color: #dcffff;
+}
+
+h1{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
