@@ -3,6 +3,7 @@ function fn_ValForm() {
     var email = document.getElementById("email").value.trim();
     var umurStr = document.getElementById("umur").value.trim();
     var kategori = document.getElementById("kategori").value.trim();
+    var bukanemail = /^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/;
 
     var sMsg = "";
 
@@ -11,7 +12,10 @@ function fn_ValForm() {
     }
     if (email === "") {
         sMsg += "\n* Anda belum mengisikan email";
+    } else if(!bukanemail.test(email)) { 
+        sMsg += "\n* Format email tidak valid";
     }
+
     if (umurStr === "") {
         sMsg += "\n* Anda belum mengisikan umur";
     }
@@ -22,6 +26,8 @@ function fn_ValForm() {
         alert("Peringatan:\n" + sMsg);
         return false;
     }
+
+
 
     var umur = parseInt(umurStr, 10);
     var info = "";
