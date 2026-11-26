@@ -55,6 +55,7 @@
             $.each(keranjang, function (i, p){
                 $("#daftarKeranjang").append(
                     "<li>" + p.nama + " - Rp" +
+                    p.harga.toLocaleString("id-ID") +
                     " x " + p.jumlah + " = Rp" +
                     (p.harga * p.jumlah).toLocaleString("id-ID") + 
                     "</li>"
